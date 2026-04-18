@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "apexvisual",
+  "version": "1.0.0",
+  "name": "Apex Visual Client",
+  "entrypoints": { "client": [ "net.apex.ApexClient" ] },
+  "mixins": [ "apex.mixins.json" ],
+  "depends": { "fabricloader": ">=0.16.7", "minecraft": "1.21.4", "java": ">=21" }
+}
