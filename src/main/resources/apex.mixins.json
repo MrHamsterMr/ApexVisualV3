@@ -1,7 +1,9 @@
 {
   "required": true,
-  "package": "net.apex.mixin",
+  "package": "net.lunaire.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [ "MixinGameRenderer", "MixinLivingEntity" ],
+  "mixins": [
+    "MixinGameRenderer"
+  ],
   "injectors": { "defaultRequire": 1 }
 }
