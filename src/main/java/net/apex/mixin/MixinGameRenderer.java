@@ -1,6 +1,6 @@
-package net.apex.mixin;
+package net.lunaire.mixin;
 
-import net.apex.ApexClient;
+import net.lunaire.LunaireClient;
 import net.minecraft.client.render.GameRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +11,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class MixinGameRenderer {
     @Inject(method = "getFov", at = @At("RETURN"), cancellable = true)
     private void onGetFov(CallbackInfoReturnable<Double> info) {
-        if (ApexClient.zoom) info.setReturnValue(info.getReturnValue() / 4.0);
+        if (LunaireClient.zoomActive) {
+            info.setReturnValue(info.getReturnValue() / 4.0);
+        }
     }
 }
